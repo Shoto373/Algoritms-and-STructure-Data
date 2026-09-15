@@ -1,0 +1,28 @@
+# Executables and compiler artifacts
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.o
+*.a
+
+# Temporary files and logs
+*.txt
+.clangd
+
+# Drafts and explained files
+*_explained*
+*_first_attempt*
+*_second_attempt*
+
+# IDE & OS files
+__pycache__/
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore loose files in 1 лаба root
+1 лаба/*
+!1 лаба/README.md
+!1 лаба/C++
+!1 лаба/Python
