@@ -11,7 +11,7 @@ def merge(left, right):
             result.append(right[j])
             j += 1
 
-    result += left[i:]
+    result += left[i:]      
     result += right[j:]
     return result
 
