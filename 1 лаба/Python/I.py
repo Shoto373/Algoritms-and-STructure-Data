@@ -1,14 +1,23 @@
-s1 = input().strip()
-s2 = input().strip()
+def solve(a, b):
+    d = {}
+    for x in a:
+        if x not in d:
+            d[x] = 0
+        d[x] += 1
 
-if len(s1) != len(s2):
-    print("NO")
-else:
-    diff = {}
-    for i in range(len(s1)):
-        c1 = s1[i]
-        c2 = s2[i]
-        diff[c1] = diff.get(c1, 0) + 1
-        diff[c2] = diff.get(c2, 0) - 1
+    for x in b:
+        if x not in d:
+            return "NO"
+        if d[x] == 0:
+            return "NO"
+        d[x] -= 1
 
-    print("NO" if any(diff.values()) else "YES")
+    for x in d:
+        if d[x] != 0:
+            return "NO"
+    return "YES"
+
+
+a = input()
+b = input()
+print(solve(a, b))
