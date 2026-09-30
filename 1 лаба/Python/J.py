@@ -1,13 +1,15 @@
-import sys
+z = []
+while True:
+    try:
+        z.append(input())
+    except EOFError:
+        break
 
-a = sys.stdin.read().split()
+for i in range(len(z)):
+    for j in range(i + 1, len(z)):
+        if z[j] + z[i] > z[i] + z[j]:
+            temp = z[i]
+            z[i] = z[j]
+            z[j] = temp
 
-for i in range(1, len(a)):
-    x = a[i]
-    j = i - 1
-    while j >= 0 and x + a[j] > a[j] + x:
-        a[j + 1] = a[j]
-        j -= 1
-    a[j + 1] = x
-
-print("".join(a))
+print("".join(z))
