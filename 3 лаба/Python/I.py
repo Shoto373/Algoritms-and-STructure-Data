@@ -2,8 +2,7 @@ n = list(map(int, input().split()))
 N = n[0]
 if len(n) > 1:
     arr = n[1:]
-else:
-    arr = list(map(int, input().split()))
+
 
 st = []
 
