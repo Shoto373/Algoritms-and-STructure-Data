@@ -8,7 +8,7 @@ else:
 st = []
 
 for x in arr:
-    # Если пришел шарик другого цвета, проверяем предыдущую группу на вершине
+   
     if st and st[-1] != x:
         k = 0
         while k < len(st) and st[-1 - k] == st[-1]:
@@ -18,7 +18,7 @@ for x in arr:
                 st.pop()
     st.append(x)
 
-# Проверяем самую последнюю группу в конце
+
 if st:
     k = 0
     while k < len(st) and st[-1 - k] == st[-1]:

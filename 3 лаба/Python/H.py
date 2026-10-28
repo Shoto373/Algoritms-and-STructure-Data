@@ -17,8 +17,7 @@ for _ in range(n):
     elif op == '-':
         ans.append(left.popleft())
 
-    # Балансировка: левая половина всегда должна быть
-    # либо равна правой по длине, либо на 1 длиннее
+   
     if len(left) < len(right):
         left.append(right.popleft())
 
