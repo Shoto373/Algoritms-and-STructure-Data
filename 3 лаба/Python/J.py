@@ -1,10 +1,10 @@
-t = int(input())
+N = int(input())
 
-for _ in range(t):
+for _ in range(N):
     arr = list(map(float, input().split()))[1:]
     target = sorted(arr)
 
-    st = []
+    st = [] 
     count = 0
 
     for i in range(len(arr)):
